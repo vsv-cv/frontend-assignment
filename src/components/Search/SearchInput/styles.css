@@ -1,0 +1,63 @@
+.searchInputContainer {
+	position: relative;
+	margin-bottom: 16px;
+}
+
+.searchInputContainer .searchInput {
+	width: 100%;
+	box-shadow: 0 4px 12px rgba(0, 19, 25, 0.08), 0 1px 2px rgba(0, 19, 25, 0.16);
+	border-radius: 8px;
+	height: 56px;
+	padding: 0 70px;
+	font-size: 18px;
+	line-height: 24px;
+	color: #001319;
+	outline: none;
+	background-color: #F5F5F6;
+}
+
+.searchInputContainer .searchInput:focus {
+	background-color: #FFFFFF;
+}
+
+.searchInputContainer .searchInput:focus + .searchIcon path {
+	fill: #99A1A3;
+}
+
+.searchInputContainer .clearIcon,
+.searchInputContainer .loadingIcon,
+.searchInputContainer .searchIcon {
+	position: absolute;
+	z-index: 1;
+	left: 19px;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto 0;
+	cursor: pointer;
+	height: 20px;
+	width: 20px;
+}
+
+.searchInputContainer .loadingIcon,
+.searchInputContainer .clearIcon {
+	left: auto;
+	right: 19px;
+}
+
+.loadingIcon {
+	animation: infinite-spinning 2s infinite;
+}
+
+.clearIcon path {
+	fill: #CCD0D1;
+}
+
+@keyframes infinite-spinning {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}

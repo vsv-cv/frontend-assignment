@@ -1,0 +1,62 @@
+.searchResult {
+	display: flex;
+	flex-direction: column;
+}
+
+.searchResult .resultItem {
+	display: flex;
+	margin-bottom: 30px;
+	font-size: 16px;
+	line-height: 22px;
+	color: #99A1A3;
+}
+
+.searchResult .resultEntityType {
+	text-transform: lowercase;
+}
+
+.searchResult .resultEntityType:first-letter {
+	text-transform: uppercase;
+}
+
+.searchResult .resultItemImg {
+	width: 48px;
+	height: 48px;
+	margin-left: auto;
+	border-radius: 100%;
+}
+
+.searchResult .resultItemTitle {
+	display: block;
+	font-size: 18px;
+	line-height: 24px;
+	color: #001319;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.searchResult .noImage {
+	margin-left: auto;
+	display: flex;
+	align-items: center;
+	width: 48px;
+	justify-content: center;
+	height: 48px;
+	background-color: #F5F5F6;
+	border-radius: 100%;
+}
+
+.searchResult .resultItemContent {
+	max-width: calc(100% - 100px);
+}
+
+.photoIcon path {
+	fill: #E6E8E8;
+}
+
+@media screen and (max-width: 567px) {
+	.searchResult .resultItemContent {
+		max-width: calc(100% - 50px);
+	}
+}

@@ -1,0 +1,44 @@
+.searchEntitiesContainer {
+	height: 44px;
+	overflow-y: hidden;
+	position: relative;
+	margin-bottom: 30px;
+}
+
+.searchEntitiesContainer:after {
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 100%;
+	left: auto;
+	width: 0;
+	box-shadow: 0 0 40px 20px white;
+}
+
+.searchEntities {
+	scroll-snap-type: x mandatory;
+	display: flex;
+	-webkit-overflow-scrolling: touch;
+	overflow-x: scroll;
+}
+
+.searchEntities .searchEntitiesItem {
+	padding: 0 16px;
+	background-color: #F5F5F6;
+	border-radius: 8px;
+	height: 44px;
+	scroll-snap-align: start;
+	margin-right: 16px;
+	font-size: 16px;
+	line-height: 44px;
+	cursor: pointer;
+	user-select: none;
+}
+
+.searchEntities .searchEntitiesItem.active {
+	background: #00B6F0 linear-gradient(360deg, rgba(255, 255, 255, 0.0001) 3.19%, rgba(255, 255, 255, 0.24) 100%);
+	color: #FFFFFF;
+	text-shadow: 0 1px 0 rgba(0, 19, 25, 0.08);
+	cursor: auto;
+}
